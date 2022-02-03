@@ -4,10 +4,14 @@ const Express = require('express'),
       port = process.env.PORT || 3000,
       products = require("./data/products.json");
 
-app.use(auth);
+if (process.env.NODE_ENV !== 'development') app.use(auth);
 
 app.get('/', (req, res) => {
     res.send("Hello World!");
+});
+
+app.get('/service', (req, res) => {
+    res.status(200).json(require('./service'));
 });
 
 app.get('/products/search', (req, res) => {
@@ -59,6 +63,9 @@ app.get('/products/:id', (req, res) => {
     }
 });
 
+app.get('/products', (req, res) => {
+    res.status(200).json(products);
+});
 
 app.listen(port, () => {
     console.log(`App listening on http://localhost:${port}`);
