@@ -1,0 +1,13 @@
+{
+  "name": "product-provider-tutorial",
+  "version": "1.0.0",
+  "description": "Tutorial Product Provider",
+  "main": "server.js",
+  "repository": "https://github.com/mrzen/product-provider-tutorial",
+  "author": "Leo Adamek <leo.adamek@mrzen.com>",
+  "license": "MIT",
+  "private": false,
+  "dependencies": {
+    "express": "^4.17.2"
+  }
+}

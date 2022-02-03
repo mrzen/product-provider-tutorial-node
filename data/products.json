@@ -1,0 +1,16 @@
+[
+    {
+        "id": "product_1",
+        "name": "My Product",
+        "pricing": {
+            "price": {
+                "currency": "GBP",
+                "value": 10000
+            }
+        },
+        "inventory": {
+            "type": "allocation",
+            "available": 10
+        }
+    }
+]
